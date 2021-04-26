@@ -236,7 +236,7 @@ const colorPalettes = [
   [hexToHSL("#6e7f80"), hexToHSL("#536872"), hexToHSL("#708090"), hexToHSL("#536878"), hexToHSL("#36454f")],
   [hexToHSL("#4b3832"), hexToHSL("#854442"), hexToHSL("#fff4e6"), hexToHSL("#3c2f2f"), hexToHSL("#be9b7b")],
   [hexToHSL("#3b5998"), hexToHSL("#8b9dc3"), hexToHSL("#dfe3ee"), hexToHSL("#f7f7f7"), hexToHSL("#ffffff")],
-  [hexToHSL("#008744"), hexToHSL("#0057e7 "), hexToHSL("#d62d20"), hexToHSL("#ffa700"), hexToHSL("#ffffff")],
+  [hexToHSL("#008744"), hexToHSL("#0057e7"), hexToHSL("#d62d20"), hexToHSL("#ffa700"), hexToHSL("#ffffff")],
   [hexToHSL("#3385c6"), hexToHSL("#4279a3"), hexToHSL("#476c8a"), hexToHSL("#49657b"), hexToHSL("#7f8e9e")],
   [hexToHSL("#d2d4dc"), hexToHSL("#afafaf"), hexToHSL("#f8f8fa"), hexToHSL("#e5e6eb"), hexToHSL("#c0c2ce")],
   [hexToHSL("#a8e6cf"), hexToHSL("#dcedc1"), hexToHSL("#ffd3b6"), hexToHSL("#ffaaa5"), hexToHSL("#ff8b94")],
