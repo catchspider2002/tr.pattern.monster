@@ -9,10 +9,14 @@
 <script>
   import Nav from "../components/Nav.svelte";
 
-  // import { onMount } from "svelte";
+  import { onMount } from "svelte";
   export let segment;
   export let github;
-  let starsCount = github.items[0].stargazers_count;
+  let starsCount;
+
+  onMount(async () => {
+    starsCount = github.items[0].stargazers_count;
+  });
 
   // const sayHello = e => {
   //   let defaultNewTheme = e.detail;
