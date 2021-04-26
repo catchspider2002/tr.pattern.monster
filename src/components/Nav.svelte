@@ -56,7 +56,7 @@
 
     // dispatch("theme", themeColor);
   }
-  export let starsCount = 105;
+   let starsCount = 105;
 
   const userAction = async () => {
     const response = await fetch("https://api.github.com/search/repositories?q=svelte-svg-patterns");
