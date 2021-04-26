@@ -1,3 +1,92 @@
+const strings = {
+  website: "https://tr.pattern.monster",
+  title: "Pattern Monster",
+  description: "Tekrarlanabilir SVG desenleri oluşturmak için basit bir çevrimiçi desen üreteci.",
+  description2: "Görüntü kalitesinde ödün vermeden web sitenizi hızlandırın.",
+  description3: "Web sitesi arka planlar, giyim, markalaşma, paketleme tasarımı ve daha fazlası için mükemmel.",
+  keywords: "svg desenleri, desenler, svg arka planlar, vektör duvar kağıdı, desen oluşturucu",
+  pages: [
+    {
+      page: "index",
+      title: "SVG Desen Oluşturucu",
+      keywords: "",
+      description: "",
+      image: "",
+    },
+    {
+      page: "changelog",
+      title: "Değişiklik Notları",
+      keywords: "değişiklik notları",
+      description: "Changelog for Pattern Monster.",
+      image: "",
+    },
+    {
+      page: "downloads",
+      title: "Downloads",
+      keywords: "downloads",
+      description: "Downloads for Pattern Monster.",
+      image: "",
+    },
+    {
+      page: "features",
+      title: "Özellikler",
+      keywords: "özellikler",
+      description: "Features for Pattern Monster.",
+      image: "",
+    },
+    {
+      page: "privacy-policy",
+      title: "Gizlilik Politikası",
+      keywords: "gizlilik politikası",
+      description: "Privacy Policy for Pattern Monster.",
+      image: "",
+    },
+  ],
+  versions: [
+    {
+      lang: "en",
+      website: "https://pattern.monster",
+    },
+    {
+      lang: "de",
+      website: "https://de.pattern.monster",
+    },
+    {
+      lang: "pl",
+      website: "https://pl.pattern.monster",
+    },
+    {
+      lang: "tr",
+      website: "https://tr.pattern.monster",
+    },
+  ],
+};
+
+const pageDetails = (page) => {
+  let pageValues =
+    strings.pages.filter((currentPage) => currentPage.page === page)[0] || strings.pages.filter((currentPage) => currentPage.page === "index")[0];
+
+  let website = strings.website;
+  let title = strings.title + " - " + strings.pages[0].title;
+  let url = website;
+  let keywords = strings.keywords;
+  let desc = strings.description + " " + strings.description3;
+  let image = pageValues.image == "" ? website + "/TwitterBG2.png" : pageValues.image;
+
+  let versions = strings.versions.map((version) => {
+    return { lang: version.lang, website: version.website + (page === "index" ? "" : "/" + page + "/") };
+  });
+
+  if (page != "index") {
+    title = pageValues.title + " - " + strings.title + " | " + strings.pages[0].title;
+    url = website + "/" + page + "/";
+    desc = pageValues.description + " " + strings.description + " " + strings.description3;
+    keywords = pageValues.keywords + ", " + strings.keywords;
+  }
+
+  return { title, url, keywords, desc, image, versions };
+};
+
 const randomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 // const randomAngle = () => Math.floor(Math.random() * 6) * 5;
@@ -278,4 +367,4 @@ const icons = {
   cancel: "M6 6l12 12m0-12L6 18",
 };
 
-export default { randomNumber, randomAngle, randomColor, icons, hexToHSL, HSLAToHexA, colorPalettes };
+export default { randomNumber, randomAngle, randomColor, icons, hexToHSL, HSLAToHexA, colorPalettes, strings, pageDetails };
