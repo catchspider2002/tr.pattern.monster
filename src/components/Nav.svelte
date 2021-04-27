@@ -138,3 +138,31 @@
     </button>
   </div>
 </nav>
+
+<style>
+  .logoOuter {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+  }
+  .gitHubIcon {
+    position: relative;
+    padding-right: 0.8em;
+  }
+
+  .starsCount {
+    /* color: red; */
+    position: absolute;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1;
+    top: -0.3em;
+    right: -0em;
+    color: var(--main-bg-color);
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 0.25em 0.25em 0.1em;
+  }
+</style>
