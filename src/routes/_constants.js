@@ -63,6 +63,7 @@ const strings = {
 };
 
 const pageDetails = (page) => {
+  let imagePrefix = "https://giguom.pages.dev/pattern.monster/images/";
   let pageValues =
     strings.pages.filter((currentPage) => currentPage.page === page)[0] || strings.pages.filter((currentPage) => currentPage.page === "index")[0];
 
@@ -71,7 +72,7 @@ const pageDetails = (page) => {
   let url = website;
   let keywords = strings.keywords;
   let desc = strings.description + " " + strings.description3;
-  let image = pageValues.image == "" ? website + "/TwitterBG2.png" : pageValues.image;
+  let image = pageValues.image == "" ? imagePrefix + "/TwitterBG2.png" : pageValues.image;
 
   let versions = strings.versions.map((version) => {
     return { lang: version.lang, website: version.website + (page === "index" ? "" : "/" + page + "/") };

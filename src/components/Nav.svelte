@@ -56,7 +56,7 @@
 
     // dispatch("theme", themeColor);
   }
-   let starsCount = 105;
+  let starsCount = 106;
 
   const userAction = async () => {
     const response = await fetch("https://api.github.com/search/repositories?q=svelte-svg-patterns");
@@ -107,17 +107,8 @@
     </a>
     <div class="logPopup" />
   </div>
-  <!-- <div /> -->
   <div class="rightLinks justify-self-end">
     <a class="downloadsButton" title="Downloads" href="downloads">Downloads</a>
-    <!-- <a
-      class="translateNav"
-      rel="noopener noreferrer"
-      title="Translate"
-      target="_blank"
-      href="https://crwd.in/pattern-monster">
-      Translate
-    </a> -->
     <LangSelect />
     <a
       class="tweetNav"
@@ -146,45 +137,4 @@
       </svg>
     </button>
   </div>
-  <!-- <li><a aria-current="{segment === 'stripes' ? 'page' : undefined}" href="stripes">stripes</a></li> -->
-  <!-- <li>
-      <a aria-current={segment === 'about' ? 'page' : undefined} href="about">about</a>
-    </li> -->
-  <!-- <li>
-      <a aria-current={segment === 'confirmed' ? 'page' : undefined} href="confirmed">confirmation</a>
-    </li> -->
-
-  <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-  <!-- <li>
-      <a rel="prefetch" aria-current={segment === 'blog' ? 'page' : undefined} href="blog">blog</a>
-    </li> -->
 </nav>
-
-<style>
-  .logoOuter {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: start;
-    gap: 1em;
-  }
-  .gitHubIcon {
-    position: relative;
-    padding-right: 0.8em;
-  }
-
-  .starsCount {
-    /* color: red; */
-    position: absolute;
-    font-size: 0.75em;
-    font-weight: 600;
-    line-height: 1;
-    top: -0.3em;
-    right: -0em;
-    color: var(--main-bg-color);
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    padding: 0.25em 0.25em 0.1em;
-  }
-</style>
