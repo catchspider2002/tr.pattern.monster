@@ -56,7 +56,7 @@
 
     // dispatch("theme", themeColor);
   }
-  let starsCount = 106;
+  let starsCount = 107;
 
   const userAction = async () => {
     const response = await fetch("https://api.github.com/search/repositories?q=svelte-svg-patterns");
@@ -108,7 +108,7 @@
     <div class="logPopup" />
   </div>
   <div class="rightLinks justify-self-end">
-    <a class="downloadsButton" title="Downloads" href="downloads">Downloads</a>
+    <a class="downloadsButton" title="Downloads" href="downloads">{strings.downloads}</a>
     <LangSelect />
     <a
       class="tweetNav"
